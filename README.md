@@ -14,9 +14,13 @@ Sleep disorder labels (Insomnia, Sleep Apnea)
 ## Overview for dataset
 
 - Load and explore the dataset.
+  
 - Train a Linear Regression model to predict sleep duration.
+  
 - Evaluate the model using Mean Squared Error (MSE) and R-squared (R2) score.
+  
 - Visualize the actual vs. predicted sleep duration with a scatter plot.
+  
 - Display a correlation heatmap of the dataset.
 
 #1 Clone the repository: 
