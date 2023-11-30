@@ -2,11 +2,47 @@
 
 ![image](https://github.com/rpearce1/sleep-disorder-ml/assets/130908954/7c07e310-b296-416c-b503-b97d509ea2c7)
 
+#Objective
+
+Develop a machine learning model to predict sleep health outcomes based on lifestyle factors, comprehensive sleep metrics, and cardiovascular health indicators using the Sleep Health and Lifestyle Dataset.
+Key Features:
+Comprehensive sleep metrics (duration, quality, stages)
+Lifestyle factors (physical activity, stress levels, BMI categories)
+Cardiovascular health indicators (blood pressure, heart rate)
+Sleep disorder labels (Insomnia, Sleep Apnea)
+
+## Overview for dataset
+
+- Load and explore the dataset.
+- Train a Linear Regression model to predict sleep duration.
+- Evaluate the model using Mean Squared Error (MSE) and R-squared (R2) score.
+- Visualize the actual vs. predicted sleep duration with a scatter plot.
+- Display a correlation heatmap of the dataset.
+
+#1 Clone the repository: 
+#2 Install the required dependencies and libraries:
+import pandas as pd
+import numpy as np
+from sklearn import tree
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
+#import pydotplus
+from IPython.display import Image
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import LabelEncoder
+from sklearn.impute import SimpleImputer
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 ## Sleep Health and Lifestyle Data App
 
 A Streamlit web application for tracking sleep health and lifestyle was created, incorporating machine learning analysis and Tableau visualizations.
 
-## Overview
+## Overview for app
 
 The Sleep Health and Lifestyle Data App allows users to:
 
@@ -24,17 +60,10 @@ The Sleep Health and Lifestyle Data App allows users to:
 
 # 1. Clone the Repository
 
-git clone https://github.com/yourusername/sleep-health-lifestyle-app.git
-
 # 2. Navigate to the project directory:
 
-cd sleep-health-lifestyle-app
-
-    Install the required dependencies:
-
-pip install -r requirements.txt
-
 # 3. Run the App:
+In app.py open the terminal and activate the dev environment
 
 streamlit run app.py
 
