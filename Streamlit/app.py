@@ -21,7 +21,7 @@ if selected_tab == "Data Overview":
     st.write("### Dataset Overview:")
     st.write(df.head())
 
-     # Display an image
+    # Display an image
     image_path = 'https://github.com/rpearce1/sleep-disorder-ml/blob/main/Figures/decision_tree2.png?raw=true'  # Replace with the actual path to your image
     st.image(image_path, caption='Your Image Caption', use_column_width=True)
 
@@ -51,8 +51,10 @@ if selected_tab == "Data Overview":
 
     # Display the plot using Streamlit
     st.pyplot(fig)
+
 # Sleep Tracking App Section
 elif selected_tab == "Sleep Tracking App":
+
     # User Profile Input Section
     st.sidebar.header("User Profile Setup")
     name = st.sidebar.text_input("Name")
@@ -65,6 +67,7 @@ elif selected_tab == "Sleep Tracking App":
     bedtime = st.time_input("Bedtime", value=datetime.now().replace(hour=22, minute=0))
     wake_time = st.time_input("Wake-up Time", value=datetime.now().replace(hour=6, minute=0))
     quality_of_sleep = st.slider("Quality of Sleep", 1, 10, 5)
+    interruptions = st.slider("Number of Interruptions", 0, 10, 2)
 
     # Combine User Input and Sleep Tracking Data
     user_data = {
@@ -74,7 +77,8 @@ elif selected_tab == "Sleep Tracking App":
         'Sleep_Condition': sleep_condition,
         'Bedtime': bedtime,
         'Wake_Time': wake_time,
-        'Quality_of_Sleep': quality_of_sleep
+        'Quality_of_Sleep': quality_of_sleep,
+        'Interruptions': interruptions  # Added interruptions to user_data
     }
 
     # Display combined data
@@ -93,3 +97,4 @@ elif selected_tab == "Sleep Tracking App":
 
     st.write("### Predicted Sleep Duration:")
     st.write(f"The predicted sleep duration is approximately {predicted_sleep_duration[0]:.2f} hours.")
+
